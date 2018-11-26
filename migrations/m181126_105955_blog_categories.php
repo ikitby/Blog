@@ -12,7 +12,7 @@ class m181125_134809_blog_category extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('blog_category', [
+        $this->createTable('blog_categories', [
             'id' => $this->primaryKey(),
             'category' => $this->string('50')->notNull()->unique(),
             'alias' => $this->string('50')->notNull()->unique(),
@@ -26,7 +26,7 @@ class m181125_134809_blog_category extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('blog_category');
+        $this->dropTable('blog_categories');
     }
 
     /*
